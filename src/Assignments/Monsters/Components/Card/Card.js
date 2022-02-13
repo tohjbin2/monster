@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Card.scss";
 
 /***********************************************************
@@ -18,6 +19,12 @@ import "./Card.scss";
 ***********************************************************/
 
 function Card({ id, name, email }) {
+  const navigate = useNavigate();
+
+  const goToDetail = () => {
+    navigate("/monsters/detail/");
+  };
+
   return (
     <div className="cardContainer">
       <div className="card-container">
